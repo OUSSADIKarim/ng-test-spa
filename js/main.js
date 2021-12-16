@@ -11,16 +11,14 @@ close.addEventListener("click", () => {
     menuBar.classList.add("hide")
 })
 
-let current = 0;
+let lia = document.querySelectorAll("a")
 
-addEventListener("click", () => {
-    document.querySelector("#current").id = ""
+lia.forEach(a => {
+    a.addEventListener("click", () => {
+let deffaultCurrent = document.querySelector("#current")
 
-    for (var i = 0; i < document.links.length; i++) {
-        if (document.URL.includes(document.links[i].href)) {
-            current = i;
-        }
-    }
-    document.links[current].id = 'current';
+        deffaultCurrent.id = ""
+        a.id = "current"
+    })
 })
 
