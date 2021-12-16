@@ -12,12 +12,14 @@ close.addEventListener("click", () => {
 })
 
 
-
 let current = 0;
 
-for (var i = 0; i < document.links.length; i++) {
-    if (document.URL.includes(document.links[i].href)) {
-        current = i;
+document.links.addEventListener("click", () => {
+    for (var i = 0; i < document.links.length; i++) {
+        if (document.URL.includes(document.links[i].href)) {
+            current = i;
+        }
     }
-}
-document.links[current].id = 'current';
+    document.links[current].id = 'current';
+})
+
