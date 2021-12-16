@@ -11,10 +11,11 @@ close.addEventListener("click", () => {
     menuBar.classList.add("hide")
 })
 
-
 let current = 0;
 
-document.links.addEventListener("click", () => {
+addEventListener("click", () => {
+    document.querySelector("#current").id = ""
+
     for (var i = 0; i < document.links.length; i++) {
         if (document.URL.includes(document.links[i].href)) {
             current = i;
